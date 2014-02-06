@@ -1,0 +1,92 @@
+<html class="ui-mobile">
+
+<head>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="css/cin.css">
+
+    <link type="text/css" rel="stylesheet" href="css/jquery.mobile.icons.min.css">
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/jquery.mobile-1.4.0.js"></script>
+    <script src="js/index.js"></script>
+
+</head>
+
+<body class="ui-mobile-viewport ui-overlay-a">
+
+    <div data-role="page" class="ui-responsive-panel">
+
+        <div data-role="panel" id="menu" data-display="reveal" data-position-fixed="true" data-dismissible="false" style=" background-color:#8a2626;">
+
+            <div class="ui-grid-b" data-role="fieldcontain">
+                <div class="ui-block-a"></div>
+                <div class="ui-block-b">
+                    <img src="img/nova_logo_cin.png" style="width:100%" />
+                    <h3 id="opencin">CInOpen</h3>
+                </div>
+                <div class="ui-block-c"></div>
+
+
+            </div>
+
+
+
+            <div data-role="tabs">
+
+
+                <ul data-role="listview" data-inset="true">
+
+                    <li data-icon="user" data-iconpos="right">
+                        <a href="#tabs" data-ajax="true">Docentes</a>
+                    </li>
+                    <li data-icon="check" data-iconpos="right">
+                        <a href="#tabs" data-ajax="true">Áreas de Atuação</a>
+                    </li>
+                    <li data-icon="heart" data-iconpos="right">
+                        <a href="#tabs" data-ajax="true">Áreas de Interesse</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="header">
+
+            <a href="#menu" data-icon="grid" data-iconpos="notext">Menu</a>
+            <h4>Dados Abertos do CIn</h4>
+        </div>
+
+
+        <div data-role="content">
+            <div data-role="tabs" id="tabs">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a href="#info" data-ajax="false" class="ui-btn-active">Informações</a>
+                        </li>
+                        <li>
+                            <a href="#analises" data-ajax="false">Análises</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="info" class="ui-body-d ui-content">
+
+                    <ul data-role="listview" id="professores_info_listview" data-inset="true" data-filter="true" data-filter-placeholder="Pesquisar..."></ul>
+                </div>
+                <div id="analises">
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div data-role="footer" data-position="fixed" role="navigation" class="ui-navbar ui-mini">
+
+        </div>
+    </div>
+
+</body>
+
+</html>
