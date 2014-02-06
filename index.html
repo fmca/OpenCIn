@@ -11,6 +11,7 @@
     <script src="js/jquery-2.1.0.min.js"></script>
     <script src="js/jquery.mobile-1.4.0.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/Chart.js"></script>
 
 </head>
 
@@ -74,7 +75,22 @@
 
                     <ul data-role="listview" id="professores_info_listview" data-inset="true" data-filter="true" data-filter-placeholder="Pesquisar..."></ul>
                 </div>
-                <div id="analises">
+                <div id="analises" class="ui-body-d ui-content" onclick="javascript:grafico()">
+                    <div class="ui-grid-b ui-responsive">
+                        <div class="ui-block-a">
+                            <canvas id="hours"></canvas>
+                        </div>
+                        <div class="ui-block-b">
+                            <canvas id="hours2"></canvas>
+                        </div>
+                        <div class="ui-block-c">
+                         <canvas id="hours3"></canvas>
+                        </div>
+
+
+                    </div>
+
+
                 </div>
             </div>
 
