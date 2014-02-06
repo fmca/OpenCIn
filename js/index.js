@@ -1,5 +1,13 @@
 var professores;
 
+$( window ).resize(function() {
+  if( $( window ).width() <550 ){
+      $("#menu").panel("close");
+  }else{
+      $("#menu").panel("open");
+  }
+});
+
 $(document).ready(function () {
     $.ajaxSetup({
         scriptCharset: "utf-8",
