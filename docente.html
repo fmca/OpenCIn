@@ -1,0 +1,133 @@
+<html class="ui-mobile">
+
+<head>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="css/cin.css">
+
+    <link type="text/css" rel="stylesheet" href="css/jquery.mobile.icons.min.css">
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/jquery.mobile-1.4.0.js"></script>
+    <script src="js/docente.js"></script>
+    <script src="js/Chart.js"></script>
+
+</head>
+
+<body class="ui-mobile-viewport ui-overlay-a">
+
+    <div data-role="page" class="ui-responsive-panel">
+
+        <div data-role="panel" id="menu" data-display="reveal" data-position-fixed="true" data-dismissible="false" style=" background-color:#8a2626;">
+
+            <div class="ui-grid-b" data-role="fieldcontain">
+                <div class="ui-block-a"></div>
+                <div class="ui-block-b">
+                    <img src="img/nova_logo_cin.png" style="width:100%" />
+                    <h3 id="opencin">CInOpen</h3>
+                </div>
+                <div class="ui-block-c"></div>
+
+
+            </div>
+
+
+
+            <div data-role="tabs">
+
+
+                <ul data-role="listview" data-inset="true">
+
+                    <li data-icon="user" data-iconpos="right">
+                        <a href="#tabs" data-ajax="true">Perfil</a>
+                    </li>
+
+                    <li data-icon="edit" data-iconpos="right">
+                        <a href="#tabs" data-ajax="true">Publicações</a>
+                    </li>
+                    <li data-icon="calendar" data-iconpos="right">
+                        <a href="#tabs" data-ajax="true">Projetos</a>
+                    </li>
+                    <li data-icon="gear" data-iconpos="right">
+                        <a href="#tabs" data-ajax="true">Cargos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="header">
+
+            <a href="#menu" data-icon="grid" data-iconpos="notext">Menu</a>
+            <h4>Dados Abertos do CIn</h4>
+        </div>
+
+
+        <div data-role="content">
+            <div data-role="tabs" id="tabs">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a href="#info" data-ajax="false" class="ui-btn-active">Informações</a>
+                        </li>
+                        <li>
+                            <a href="#analises" data-ajax="false" onclick="javascript:grafico()">Análises</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+
+                <div id="info" class="ui-body-d ui-content">
+                    <form>
+                        <label for="#email">Nome</label>
+                        <input id="nome" type="text" readonly="readonly" value="Abc@abc.com" />
+                        <label for="#email">Email</label>
+                        <input id="email" type="email" readonly="readonly" value="Abc@abc.com" class="disable">
+
+                        <label for="#lattes">Lattes</label>
+                        <input id="lattes" readonly="readonly" value="http://lattes.com/989Xas8JgF" />
+                        
+                        <label for="#telefone">Telefone</label>
+                        <input id="telefone" readonly="readonly" value="12312 1231 23" />
+                        
+                        <label for="#sala">Sala</label>
+                        <input id="sala" readonly="readonly" value="Sala A" />
+
+                    </form>
+                </div>
+
+
+
+
+                <div id="analises" class="ui-body-d ui-content" onclick="javascript:grafico()">
+                    <div class="ui-grid-a ui-responsive">
+                        <div class="ui-block-a center">
+                            <h3>Publicações x Ano</h3>
+                            <canvas id="publicacoes" width="400px" height="300px"></canvas>
+                        </div>
+                        <div class="ui-block-b center">
+                            <h3>Pulicações x Área</h3>
+                            <canvas id="hours2" width="300px" height="300px" ></canvas>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div data-role="footer" data-position="fixed" role="navigation" class="ui-navbar ui-mini">
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
